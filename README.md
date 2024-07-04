@@ -17,9 +17,7 @@ The repository contains the official implementation for the MICCAI 2024 paper [F
 3DGS with SfM fails to recover accurate camera poses and geometry in surgical scenes due to the challenges of minimal textures and photometric inconsistencies. In our paper, we propose Free-SurGS as the first SfM-free 3DGS-based method for surgical scene reconstruction from monocular video by jointly optimizing the camera poses and scene representation.
 ## Demo
 
-<video width="720" height="400" controls autoplay muted>
-  <source src="./images/video.mp4" type="video/mp4">
-</video>
+ <video src="https://github.com/wrld/Free-SurGS/blob/main/images/video.mp4"></video>
 
 ## Pipeline
 ![Pipeline](./images/overview.png)
