@@ -1,5 +1,5 @@
-python train.py -s ../../Datasets/scared_GS/scared_demo/ \
-        --model_path ./outputs/scared_demo/ \
+python train.py -s ./demo_scared/ \
+        --model_path ./outputs/demo_scared/ \
         --visualize True \
         --port 8039 \
         --log True

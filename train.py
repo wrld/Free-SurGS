@@ -253,9 +253,8 @@ class FreeSurGS:
                 gt_image = self.poses.record_data['colors'][timestep].cuda()
                 rgb_loss = rgb_loss_func(image, gt_image) * self.loss_weight_mapping['rgb']
                 mono_dep = self.poses.record_data['monodeps'][timestep:timestep+1].float().cuda()
-
-                pearson_dep_loss = pearson_depth_loss(mono_dep[0], render_pkg["render_dep"][0])
-                lp_loss = local_pearson_loss(mono_dep[0], render_pkg["render_dep"][0], 128, 0.5)
+                pearson_dep_loss = pearson_depth_loss(mono_dep[0], render_pkg["render_dep"])
+                lp_loss = local_pearson_loss(mono_dep[0], render_pkg["render_dep"], 128, 0.5)
                 dep_loss = (pearson_dep_loss * 0.05 + lp_loss * 0.15) 
                 loss += rgb_loss + dep_loss
                 if i == 0:
